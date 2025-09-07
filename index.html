@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выберите предмет</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000, #111); /* Gradient background */
+            color: #fff; /* White text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+        }
+        .card {
+            background: linear-gradient(135deg, #333, #444);
+            padding: 30px;
+            border: 2px solid #2ecc71;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(135deg, #444, #333);
+            color: #2ecc71;
+        }
+        .card h2 {
+            font-size: 1.4em;
+            margin: 0;
+            text-align: center;
+            word-wrap: break-word;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        footer {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            margin-top: auto;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Выберите предмет для конференции</h1>
+    </header>
+    <div class="container">
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/ium-kzny-cet')">
+            <h2>Українська мова</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/emp-nvoh-uxg')">
+            <h2>Українська література</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/ngz-vzbc-gqy')">
+            <h2>Зарубіжна література</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/akm-gpqk-hkw')">
+            <h2>Україна і світ</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/ngz-vzbc-gqy')">
+            <h2>Англійська мова</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/maa-ycng-wyn')">
+            <h2>Математика</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/blb-vhyu-zsp')">
+            <h2>Здоров'я, безпека та добробут</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/wuq-nthy-uap')">
+            <h2>Пізнаємо природу</h2>
+        </div>
+        <div class="card" title_modal="Reeeee">
+            <h2>Мистецтво</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/oef-esfj-gfa')">
+            <h2>Інформатика</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/bib-vwhu-zsp')">
+            <h2>Технології</h2>
+        </div>
+        <div class="card" onclick="redirectToMeet('https://meet.google.com/qtc-jift-jdb')">
+            <h2>Фізична культура /Виховна година</h2>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Все права защищены.</p>
+    </footer>
+
+    <script>
+        function redirectToMeet(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
